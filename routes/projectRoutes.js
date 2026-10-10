@@ -1,0 +1,13 @@
+const express = require("express");
+const controller = require("../controllers/projectController");
+const { create: createTask } = require("../controllers/taskController");
+const { verifyToken } = require("../middleware/authMiddleware");
+const router = express.Router();
+router.use(verifyToken);
+router.get("/workspaces/:workspaceId/projects", controller.list);
+router.post("/workspaces/:workspaceId/projects", controller.create);
+router.post("/projects/:projectId/tasks", createTask);
+router.get("/projects/:id", controller.get);
+router.patch("/projects/:id", controller.update);
+router.delete("/projects/:id", controller.remove);
+module.exports = router;

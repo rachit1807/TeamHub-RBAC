@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="310" viewBox="0 0 1200 310" role="img" aria-labelledby="title desc">
+  <title id="title">TeamHub task lifecycle</title>
+  <desc id="desc">Tasks move from To do to In progress, then In review, and finally Completed.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#172033" flood-opacity=".08"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9aa7bd"/></marker>
+  </defs>
+  <rect width="1200" height="310" rx="28" fill="#f7f8fc"/>
+  <text x="60" y="62" fill="#53617a" font-family="Inter,Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2.5">TASK LIFECYCLE</text>
+  <text x="60" y="99" fill="#19243a" font-family="Inter,Arial,sans-serif" font-size="25" font-weight="700">A clear path from idea to done</text>
+  <g stroke="#9aa7bd" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M278 199h33"/><path d="M562 199h33"/><path d="M846 199h33"/>
+  </g>
+  <g filter="url(#shadow)" font-family="Inter,Arial,sans-serif">
+    <g transform="translate(55 135)"><rect width="220" height="118" rx="20" fill="#fff" stroke="#e4e8f1"/><rect x="18" y="18" width="34" height="34" rx="11" fill="#f0edff"/><text x="35" y="41" text-anchor="middle" font-size="18" fill="#7962dd">○</text><text x="18" y="82" font-size="18" font-weight="700" fill="#202a40">To do</text><text x="18" y="103" font-size="12" fill="#7d879a">Ready to be picked up</text></g>
+    <g transform="translate(339 135)"><rect width="220" height="118" rx="20" fill="#fff" stroke="#e4e8f1"/><rect x="18" y="18" width="34" height="34" rx="11" fill="#fff2dc"/><text x="35" y="41" text-anchor="middle" font-size="18" fill="#de9b35">↻</text><text x="18" y="82" font-size="18" font-weight="700" fill="#202a40">In progress</text><text x="18" y="103" font-size="12" fill="#7d879a">Someone is working on it</text></g>
+    <g transform="translate(623 135)"><rect width="220" height="118" rx="20" fill="#fff" stroke="#e4e8f1"/><rect x="18" y="18" width="34" height="34" rx="11" fill="#e8f3ff"/><text x="35" y="41" text-anchor="middle" font-size="18" fill="#4587cb">⌕</text><text x="18" y="82" font-size="18" font-weight="700" fill="#202a40">In review</text><text x="18" y="103" font-size="12" fill="#7d879a">Ready for a final check</text></g>
+    <g transform="translate(907 135)"><rect width="238" height="118" rx="20" fill="#fff" stroke="#e4e8f1"/><rect x="18" y="18" width="34" height="34" rx="11" fill="#e5f5ee"/><text x="35" y="41" text-anchor="middle" font-size="18" fill="#329b72">✓</text><text x="18" y="82" font-size="18" font-weight="700" fill="#202a40">Completed</text><text x="18" y="103" font-size="12" fill="#7d879a">Finished and recorded</text></g>
+  </g>
+</svg>

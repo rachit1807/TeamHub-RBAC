@@ -1,0 +1,36 @@
+{
+  "name": "teamhub-rbac",
+  "version": "1.0.0",
+  "description": "TeamHub is a full-stack team project management app with JWT authentication and workspace-based access control.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed:admin": "node scripts/seedAdmin.js",
+    "check": "node --check app.js && node --check server.js && node --check config/database.js && node --check controllers/authController.js && node --check controllers/workspaceController.js && node --check controllers/projectController.js && node --check controllers/taskController.js && node --check public/js/dashboard.js && node --check public/js/auth.js"
+  },
+  "keywords": [
+    "RBAC",
+    "Node.js",
+    "Express",
+    "Sequelize",
+    "SQLite",
+    "JWT",
+    "Project Management"
+  ],
+  "author": "Rachit Tripathi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.23.1",
+    "sequelize": "^6.37.8",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

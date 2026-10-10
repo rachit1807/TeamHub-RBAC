@@ -1,0 +1,14 @@
+const express = require("express");
+const controller = require("../controllers/taskController");
+const { verifyToken } = require("../middleware/authMiddleware");
+const router = express.Router();
+router.use(verifyToken);
+router.get("/board", controller.board);
+router.get("/", controller.list);
+router.get("/:id", controller.get);
+router.patch("/:id", controller.update);
+router.patch("/:id/status", controller.updateStatus);
+router.delete("/:id", controller.remove);
+router.get("/:id/comments", controller.listComments);
+router.post("/:id/comments", controller.addComment);
+module.exports = router;

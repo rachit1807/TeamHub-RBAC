@@ -1,0 +1,16 @@
+const express = require("express");
+const controller = require("../controllers/workspaceController");
+const { verifyToken } = require("../middleware/authMiddleware");
+const router = express.Router();
+router.use(verifyToken);
+router.get("/", controller.list);
+router.post("/", controller.create);
+router.get("/:id", controller.get);
+router.patch("/:id", controller.update);
+router.delete("/:id", controller.remove);
+router.post("/:id/transfer-ownership", controller.transferOwnership);
+router.get("/:id/members", controller.listMembers);
+router.post("/:id/members", controller.addMember);
+router.patch("/:id/members/:userId", controller.updateMember);
+router.delete("/:id/members/:userId", controller.removeMember);
+module.exports = router;
