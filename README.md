@@ -31,6 +31,7 @@ TeamHub helps a team organize work in a shared workspace. A workspace contains p
 - View tasks in a list or group them by status on the Kanban board.
 - Add comments, search and filter tasks, and review dashboard summaries.
 - Use administrator routes to review accounts and change global roles.
+- Switch between light and dark themes from the sun/moon button; TeamHub remembers the choice in this browser across the landing, sign-in, registration, and workspace pages.
 
 ## Screens and workflow
 
