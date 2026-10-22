@@ -193,9 +193,11 @@ Run the collection in order. It checks sign-up and login, validation, authorizat
 
 ## Deploy
 
-The live demo runs on Render and uses PostgreSQL. `render.yaml` documents the web service, Node.js start command, health check, and generated JWT secret. The hosted service reads its private database connection from `DATABASE_URL`; `DATABASE_SSL=true` enables TLS for managed PostgreSQL providers.
+The live demo runs on **Render**, with a dedicated **Neon PostgreSQL 16** database in Singapore. The database is separate from other projects. Existing users and all workspace, membership, project, task and comment tables were migrated and verified on **22 October 2026**.
 
-The current free Render Postgres database is scheduled to expire on November 9, 2026. Upgrade or migrate the database before then if the demo must keep its data. The free web service can sleep after inactivity, so its first response may take 50 seconds or more. Keep this demo data-only and do not store real personal or company information. See [Render's free instance limits](https://render.com/docs/free).
+`render.yaml` documents the web service, Node.js start command, health check and generated JWT secret. Set the private `DATABASE_URL` to the Neon connection URL and `DATABASE_SSL=true` to enable TLS. Production currently uses Neon's direct endpoint. Keep database credentials in the hosting environment, never in Git.
+
+The production database branch has **no scheduled expiry**. TeamHub no longer depends on the former Render database expiring on 9 November 2026. Neon Free usage quotas still apply. The free Render web service can sleep after inactivity, so its first response may take 50 seconds or more. See [Neon plans](https://neon.com/docs/introduction/plans) and [Render's free instance limits](https://render.com/docs/free).
 
 ## Repository layout
 
